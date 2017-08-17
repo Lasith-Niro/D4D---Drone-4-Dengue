@@ -13,8 +13,10 @@
             vm.gettingName = $sharedUsernameServices.getUsername();
             vm.gettingID = $sharedUseridServices.getUserid();
         
+            //Lasith updated!!!
             function gotoThePage(pageName) {
-
+                var siteURL = (window.location.href).concat("/"+pageName);
+                window.location = siteURL;
             }
 
             console.log("homeController");

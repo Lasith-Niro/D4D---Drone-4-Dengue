@@ -40,13 +40,12 @@
             console.log("profileController");
 
             function saveSelectedValue(selectValue) {
-                console.log(selectValue);
-                
+//                console.log(selectValue);
                 firebase.database().ref('users/' + vm.gettingID).set({
                     username: vm.gettingName,
                     profile: selectValue
                 });
-                
+                //Site URL 
                 var siteURL = (window.location.href).replace("profile", "");
                 window.location = siteURL;
                 location.reload();

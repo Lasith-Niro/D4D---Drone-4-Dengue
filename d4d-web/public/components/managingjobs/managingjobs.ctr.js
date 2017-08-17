@@ -78,12 +78,14 @@
                 });
 
             }
-
+            
+            //Load createjob page
             function gotoCreateJob() {
                 var siteURL = (window.location.href).concat("/createjob");
                 window.location = siteURL;
             }
             
+            //Log out function
             function logout() {
                 firebase.auth().signOut();
             }
@@ -97,7 +99,7 @@
             }
             
             function triggerPage() {
-                vm.showToast("Landed");
+                vm.showToast("Loading");
             }
 
     }]);

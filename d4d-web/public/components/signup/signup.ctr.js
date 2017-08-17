@@ -5,9 +5,9 @@
     angular
         .module('d4d')
         .controller('signupController', ['$state', '$mdToast', '$firebaseAuth', '$firebase', '$firebaseObject', 'sharedUsernameServices', 'sharedUseridServices', function($state, $mdToast, $firebaseAuth, $firebase, $firebaseObject, $sharedUsernameServices, $sharedUseridServices)  {
-        
+            
+            //Declaring variables
             var vm = this;
-
             vm.signup = signup;
             vm.showToast = showToast;
             vm.validateEmail = validateEmail;
@@ -58,7 +58,6 @@
                         }).catch(function(error) {
                             console.error("Error: ", error);
                         });
-                        
                     } else {
                         vm.showToast("Invalid email address");
                     }   
@@ -66,7 +65,6 @@
                     vm.showToast("Fill all fields");
                 }
             }
-
             function validateEmail(email) {
                 var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 return re.test(email);
